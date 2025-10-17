@@ -2,4 +2,70 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+:root {
+  --white: #F3F5F8;
+  --light: #F0FDF4;
+  --gray-subtitulo: #4b5563;
+  --gray-titulo: #1f2937;
+  --green-button: #16A34A;
+  --green-button-hover: #21C05C;
+  --blue-circle: #2563eb;
+}
+
+h1, h2, p, a, button, input {
+  font-family: "Poppins", sans-serif;
+}
+
+h3, h4, h5, h6 {
+  font-family: "Inter", sans-serif;
+}
+
+h1, h2, h3 {
+  color: var(--gray-titulo);
+  font-size: 25px;
+}
+
+p {
+  color: var(--gray-subtitulo);
+  font-size: 16px;
+}
+
+.btn-primary {
+  background-color: var(--green-button);
+  color: var(--white);
+  border: solid 1px var(--green-button-hover);
+  padding: 10px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+.btn-primary:hover {
+  background-color: var(--green-button-hover);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--green-button);
+  border: solid 1px var(--green-button);
+  padding: 10px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.btn-secondary:hover {
+  background-color: var(--green-button);
+  color: var(--white);
+}
+
+.btn-secondary-blue {
+  color: var(--blue-circle);
+  border: solid 1px var(--blue-circle);
+}
+.btn-secondary-blue:hover {
+  background-color: var(--blue-circle);
+  color: var(--white);
 }/*# sourceMappingURL=style.css.map */
