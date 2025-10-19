@@ -153,10 +153,71 @@ header ul li a:hover {
   font-weight: bold;
 }
 
+.como-funciona {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.como-funciona h2, .como-funciona .como-subtitulo {
+  width: 100%;
+  text-align: center;
+}
+.como-funciona h2 {
+  font-weight: 800;
+}
+.como-funciona .card {
+  background-color: #F3F5F8;
+  border: solid 1px #eee;
+  border-radius: 5px;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin: 25px;
+}
+.como-funciona .card h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 300;
+}
+.como-funciona .card .h3-doadores {
+  color: var(--green-button);
+}
+.como-funciona .card .h3-adquirente {
+  color: var(--blue);
+}
+.como-funciona .card .item-card {
+  display: flex;
+  gap: 10px;
+}
+.como-funciona .card .numero-card {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  border-radius: 100%;
+}
+.como-funciona .card .numero-green {
+  background-color: var(--green-button);
+}
+.como-funciona .card .numero-blue {
+  background-color: var(--blue);
+}
+
 @media (max-width: 768px) {
   button, .btn-primary, .btn-secondary, .btn-secondary-blue {
     font-size: 0.7rem;
     padding: 7px 10px;
+  }
+  p {
+    font-size: 0.8rem;
   }
   .secao {
     padding: 1rem 1rem;
@@ -186,9 +247,6 @@ header ul li a:hover {
   .banner h1 {
     font-size: 1.5rem;
   }
-  .banner p {
-    font-size: 0.9rem;
-  }
   .banner button img {
     width: 1rem;
   }
@@ -207,5 +265,16 @@ header ul li a:hover {
   }
   .numeros .numero-item p {
     font-size: 0.8rem;
+  }
+  .como-funciona {
+    gap: 0.5rem;
+    padding: 1rem 0.3rem;
+  }
+  .como-funciona .como-subtitulo {
+    padding-bottom: 20px;
+  }
+  .como-funciona .card {
+    margin: 5px 7px;
+    gap: 2rem;
   }
 }/*# sourceMappingURL=style.css.map */
