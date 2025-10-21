@@ -14,21 +14,31 @@
     --blue: #2563eb;
 }
 
-h1, h2, p, a, button, input {
+h1,
+h2,
+p,
+a,
+button,
+input {
     font-family: 'Poppins', sans-serif;
-} 
+}
 
-h3, h4, h5, h6 {
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Inter', sans-serif;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     color: var(--gray-titulo);
     font-size: 25px;
-}   
+}
 
 p {
-    color: var(--gray-subtitulo );
+    color: var(--gray-subtitulo);
     font-size: 16px;
 }
 
@@ -55,7 +65,7 @@ button {
 
     &:hover {
         background-color: var(--green-button-hover);
-    } 
+    }
 }
 
 .btn-secondary {
@@ -71,12 +81,12 @@ button {
     &:hover {
         background-color: var(--green-button-hover);
         color: var(--white);
-    } 
+    }
 }
 
 .btn-secondary-blue {
     background-color: transparent;
-    color: var(--blue); 
+    color: var(--blue);
     border: solid 1px var(--blue);
     padding: 10px 30px;
     border-radius: 5px;
@@ -87,6 +97,11 @@ button {
     &:hover {
         background-color: var(--light);
     }
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
 }
 
 // Header
@@ -107,7 +122,7 @@ header {
         display: flex;
         align-items: center;
         gap: 30px;
-        
+
     }
 
     ul {
@@ -185,15 +200,6 @@ header {
     justify-content: center;
     flex-wrap: wrap;
 
-    h2, .como-subtitulo {
-        width: 100%;
-        text-align: center;
-    }
-
-    h2 {
-        font-weight: 800;   
-    }
-
     .card {
         background-color: #F3F5F8;
         border: solid 1px #eee;
@@ -242,9 +248,108 @@ header {
         }
 
         .numero-blue {
-            background-color: var(--blue); 
+            background-color: var(--blue);
         }
     }
+}
+
+h2,
+.subtitulo {
+    width: 100%;
+    text-align: center;
+}
+
+h2 {
+    font-weight: bolder;
+}
+
+// PRODUTOS DISPONIVEIS 
+
+.adquirir {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #F3F5F8;
+
+    .card {
+        background-color: #fff;
+        border-radius: 10px;
+        border: solid 2px var(--green-button);
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding-bottom: 20px;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 20px;
+        flex-wrap: wrap;
+
+        p {
+            font-size: .8rem;
+            line-height: .2rem;
+        }
+
+        button {
+            cursor: pointer;
+            background-color: var(--green-button);
+            border: none;
+            border-radius: 10px;
+            padding: 10px 15px;
+            color: #fff;
+        }
+    }
+}
+
+// RELATOS 
+
+.relatos {
+    padding: 3rem 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        max-width: 25vw;
+        padding: 2rem;
+        border-radius: 15px;
+        border: solid 1px var(--gray-subtitulo);
+        margin-top: 20px;
+
+        img {
+            width: 6rem;
+        }
+
+        .pessoa {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+
+            img {
+                width: 3rem;
+            }
+
+            .nome {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+// DOAR 
+
+.doar {
+    background-color: #F3F5F8;
+    padding: 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
 
@@ -256,9 +361,16 @@ header {
 // Responsive Design
 @media (max-width: 768px) {
 
-    button, .btn-primary, .btn-secondary, .btn-secondary-blue {
+    button,
+    .btn-primary,
+    .btn-secondary,
+    .btn-secondary-blue {
         font-size: .7rem;
         padding: 7px 10px;
+    }
+
+    .buttons {
+        justify-content: center;
     }
 
     p {
@@ -299,10 +411,11 @@ header {
         }
 
         button {
+
             // margin-left: 15px;
             img {
                 width: 1rem;
-            }   
+            }
         }
 
         .img-banner-reciclagem {
@@ -322,6 +435,7 @@ header {
             h3 {
                 font-size: 1.6rem;
             }
+
             p {
                 font-size: .8rem;
             }
@@ -330,16 +444,36 @@ header {
 
     .como-funciona {
         gap: .5rem;
-        padding: 1rem .3rem;
+        padding: 2rem;
 
-        .como-subtitulo {
-            padding-bottom: 20px;
-        }
 
         .card {
-        margin: 5px 7px;
-        gap: 2rem;
+            margin: 5px 7px;
+            gap: 2rem;
         }
     }
-    
+
+    .subtitulo {
+        padding-bottom: 20px;
+    }
+
+    .adquirir {
+        padding: 2rem 0;
+
+        .card {
+            margin: 0px 0 32px;
+        }
+    }
+
+    .relatos {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+        .card {
+            min-width: 80vw;
+            margin: 0;
+        }
+    }
+
 }
