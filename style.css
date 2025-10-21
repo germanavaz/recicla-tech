@@ -296,11 +296,17 @@ h2 {
 
 .doar {
   background-color: #F3F5F8;
-  padding: 2rem 4rem;
+  padding: 5rem 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
+}
+.doar h2 {
+  font-size: 3rem;
+}
+.doar p {
+  padding-bottom: 20px;
 }
 
 footer {
@@ -435,6 +441,12 @@ footer .footer-secondary {
   .relatos .card {
     min-width: 80vw;
     margin: 0;
+  }
+  .doar {
+    padding: 2rem 1.5rem;
+  }
+  .doar h2 {
+    font-size: 1.5rem;
   }
   footer {
     padding: 0;
